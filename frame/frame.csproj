@@ -66,22 +66,52 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\appController.js" />
     <Content Include="app\appRouteConfig.js" />
+    <Content Include="app\dialogs\wwaSelectEmployeeController.js" />
+    <Content Include="app\dialogs\wwaSelectEmployeeTemplate.html" />
+    <Content Include="app\dialogs\wwaSelectLocationController.js" />
+    <Content Include="app\dialogs\wwaSelectLocationTemplate.html" />
     <Content Include="app\directives\wwaDashboardDirective.js" />
     <Content Include="app\directives\wwaGuidesDirective.js" />
     <Content Include="app\directives\wwalocationsDirective.js" />
+    <Content Include="app\services\dataService.js" />
+    <Content Include="app\widgets\wwaEmployee\wwaEmployee.css" />
+    <Content Include="app\widgets\wwaEmployee\wwaEmployeeDirective.js" />
+    <Content Include="app\widgets\wwaEmployee\wwaEmployeeTemplate.html" />
+    <Content Include="app\widgets\wwaInventory\wwaInventory.css" />
+    <Content Include="app\widgets\wwaInventory\wwaInventoryDirective.js" />
+    <Content Include="app\widgets\wwaInventory\wwaInventoryTemplate.html" />
+    <Content Include="app\widgets\wwaTemperature\wwaTemperature.css" />
+    <Content Include="app\widgets\wwaTemperature\wwaTemperatureDirective.js" />
+    <Content Include="app\widgets\wwaTemperature\wwaTemperatureTemplate.html" />
     <Content Include="Content\angular-gridster.min.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="dist\psFramework.css" />
+    <Content Include="dist\psFramework.js" />
     <Content Include="ext-modules\psDashboard\psDashboard.css" />
     <Content Include="ext-modules\psDashboard\psDashBoardDirective.js" />
     <Content Include="ext-modules\psDashboard\psDashboardTemplate.html" />
+    <Content Include="ext-modules\psDashboard\psWidgetBodyDirective.js" />
+    <Content Include="ext-modules\psDashboard\psWidgetBodyTemplate.html" />
+    <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileDirective.js" />
+    <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileSmallDirective.js" />
+    <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileSmallTemplate.html" />
+    <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileTemplate.html" />
     <Content Include="ext-modules\psMenu\psMenuGroupTemplate.html" />
     <Content Include="ext-modules\psMenu\psMenuGroupDirective.js" />
+    <Content Include="Gulpfile.js" />
+    <Content Include="index - old.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-gridster.min.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
@@ -138,6 +168,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\ngStorage.js" />
+    <Content Include="Scripts\ngStorage.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-angular.module('app').directive('wwaDashboard', [function () {
+angular.module('app').directive('wwaDashboard', ['$localStorage', function ($localStorage) {
     return {
         scope: {
         },
@@ -16,22 +16,59 @@ angular.module('app').directive('wwaDashboard', [function () {
                 margins: [20, 20], // the pixel distance between each widget
                 outerMargin: false, // whether margins apply to outer edges of the grid
             };
-            scope.widgets = [
+
+            scope.widgetDefinitions = [
                 {
-                    title: 'title1',
-                    sizeX: 3,
-                    sizeY: 3,
-                    row: 0,
-                    col: 0
+                    title: 'Temperatue',
+                    settings: {
+                        title: 'First',
+                        sizeX: 3,
+                        sizeY: 3,
+                        minSizeX: 2,
+                        minSizey: 2,
+                        template: '<wwa-temperature></wwa-temperature>',
+                        widgetSettings: {
+                            id: 1000,
+                            templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                            controller: 'wwaSelectLocationController'
+                        }
+                    }
                 },
                 {
-                    title: 'title2',
-                    sizeX: 2,
-                    sizeY: 4,
-                    row: 0,
-                    col: 5
-                }
+                    title: 'Employee',
+                    settings: {
+                        title: 'Second',
+                        sizeX: 5,
+                        sizeY: 3,
+                        template: '<wwa-employee></wwa-employee>',
+                        widgetSettings: {
+                            id: 5000,
+                            templateUrl: 'app/dialogs/wwaSelectEmployeeTemplate.html',
+                            controller: 'wwaSelectEmployeeController'
+                        }
+                    }
+                },
+                {
+                    title: 'Inventory',
+                    settings: {
+                        title: 'Third',
+                        sizeX: 5,
+                        sizeY: 3,
+                        template: '<wwa-inventory></wwa-inventory>',
+                        widgetSettings: {
+                            id: 1000,
+                            templateUrl: 'app/dialogs/wwaSelectLocationTemplate.html',
+                            controller: 'wwaSelectLocationController'
+                        }
+                    }
+                },
             ];
+            scope.widgets =$localStorage.widgets || [];
+
+            scope.$watch('widgets', function () {
+                $localStorage.widgets = scope.widgets;
+
+            }, true);
      }
     }
 }]);
